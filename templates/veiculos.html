@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>Veículos</title></head>
+<body>
+    <h2>Cadastro de Veículos</h2>
+    <form method="post">
+        Modelo: <input name="modelo"><br>
+        Placa: <input name="placa"><br>
+        Ano: <input name="ano"><br>
+        Diária: <input name="diaria"><br>
+        Mensal: <input name="mensal"><br>
+        <input type="submit" value="Salvar">
+    </form>
+    <h3>Veículos Cadastrados</h3>
+    <ul>
+    {% for v in veiculos %}
+        <li>{{ v[1] }} - {{ v[2] }} - {{ v[3] }} - R$ {{ v[4] }}/dia</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
